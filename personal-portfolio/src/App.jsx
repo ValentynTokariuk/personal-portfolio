@@ -1,32 +1,37 @@
 import React from 'react';
 import './App.css';
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import About from './About';
+import Projects from './Projects';
+import Contact from './Contact';
 
 const App = () => {
   return (
-    <div className="portfolio">
-      <header>
-        <h1>My Portfolio</h1>
-        <nav>
-          <a href="#about">About</a>
-          <a href="#projects">Projects</a>
-          <a href="#contact">Contact</a>
-        </nav>
-      </header>
+    <Router>
+      <div className="portfolio">
+        <header>
+          <h1>My Portfolio</h1>
+          <nav>
+            <Link to="/about">About</Link>
+            <Link to="/projects">Projects</Link>
+            <Link to="/contact">Contact</Link>
+          </nav>
+        </header>
 
-      <section id="about">
-        <h2>About Me</h2>
-        <p>This is a short description about myself.</p>
-      </section>
+        <Routes>
+          <Route path="/about" element={<About />} />
+          <Route path="/projects" element={<Projects />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/about" element={<About />} /> 
+          <Route path="/" element={<Home />} />
 
-      <section id="projects">
-        <h2>My Projects</h2>
-        {/* You can add project components here later */}
-      </section>
+        </Routes>
 
-      <footer>
-        <p>Contact: example@example.com</p>
-      </footer>
-    </div>
+        <footer>
+          <p>Contact: example@example.com</p>
+        </footer>
+      </div>
+    </Router>
   );
 };
 
