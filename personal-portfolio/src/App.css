@@ -5,8 +5,17 @@
   box-sizing: border-box;
 }
 body {
-  font-family: 'Lato', sans-serif;
+  font-family: 'Roboto', sans-serif; /* Default font for body text */
 }
+
+h1, h2, h3 {
+  font-family: 'Poppins', sans-serif; /* Different font for headings */
+}
+
+.navbar, .cta-btn {
+  font-family: 'Montserrat', sans-serif; /* A third font for special elements */
+}
+
 
 
 #home {
@@ -15,7 +24,7 @@ body {
 }
 
 .hero {
-  font-family: 'Lato', sans-serif;
+  font-family: '', sans-serif;
   text-align: center;
   padding: 50px 20px;
   background-color: #282c34;
