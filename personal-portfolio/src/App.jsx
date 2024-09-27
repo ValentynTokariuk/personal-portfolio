@@ -30,7 +30,7 @@ const App = () => {
         </Routes>
 
         <footer>
-          <h3><a href='./Contact'>Contact me</a></h3>
+          <h3><Link to="/contact">Contact</Link></h3>
           
         </footer>
       </div>
