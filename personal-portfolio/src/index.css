@@ -5,18 +5,18 @@
   box-sizing: border-box;
 }
 
+
 html, body {
-  height: 100%; /* Ensure the gradient covers the entire page */
+  background: linear-gradient(130deg, rgba(0, 0, 0, 0.9) 10%, rgba(111, 0, 0, 0.9) 90%);
+  min-height: 100vh;
   font-family: Arial, sans-serif;
   color: white;
   margin: 0;
   padding: 0px;
-  background: linear-gradient(130deg, #000000cb 15%, #6f0000 85%);
-  background-size: cover;
+ 
 }
 
 header {
-  background-color: #444;
   color: white;
   padding: 10px 20px;
   text-align: center;
@@ -41,7 +41,8 @@ nav a {
 }
 
 section {
-  padding: 20px;
+  padding: 40px;
+  margin: 0;
 }
 
 footer {

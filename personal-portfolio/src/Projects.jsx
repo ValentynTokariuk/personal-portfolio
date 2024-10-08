@@ -21,46 +21,57 @@ import orchImage3 from './assets/orch3.png';
 
 const projects = [
   {
-    title: 'Custom Spreadsheet Application with Formula Support and Data Visualization',
+    title: 'Cloud-Native Application Deployment Using Docker and Kubernetes',
     description: (
       <>
         <strong>Description:</strong>
-        <p>This project is a custom-built spreadsheet application developed using Python and PyQt5, featuring core functionality similar to Microsoft Excel. It provides users with the ability to manage tabular data, perform calculations using formulas, visualize data with charts, and perform various data manipulation tasks. The application is designed to be user-friendly while offering flexibility for advanced use cases.</p>
+        <p>
+          This project demonstrates the deployment of a cloud-native application, specifically an online university course enrollment system, using Docker and Kubernetes technologies. The objective was to containerize the application and database components using Docker and then orchestrate these containers using Kubernetes to ensure scalability, reliability, and security.
+        </p>
 
         <strong>Key Features:</strong>
         <ul>
-          <li><strong>Spreadsheet Functionality:</strong> Supports adding and editing cells, rows, and columns with the ability to sort and filter data.</li>
-          <li><strong>Formula Bar:</strong> Users can input formulas (e.g., <code>=SUM(A1:B2)</code> or arithmetic calculations like <code>=A1+B2</code>). The formulas are stored and can be edited later, and results are automatically updated in the selected cells.</li>
-          <li><strong>Data Visualization:</strong> Provides real-time bar chart generation based on selected columns, allowing users to visualize their data directly within the app.</li>
-          <li><strong>Undo/Redo Functionality:</strong> Users can easily revert changes with undo/redo actions, preserving the previous states of the spreadsheet.</li>
-          <li><strong>CSV File Import/Export:</strong> Data can be imported from or exported to CSV files, making it easy to transfer data between this application and other platforms.</li>
-          <li><strong>Cell Formatting:</strong> Supports basic text formatting such as bold, italic, font changes, and cell alignment (left, center, right).</li>
-          <li><strong>Context Menu Actions:</strong> Users can quickly perform operations such as copy, cut, paste, and font color changes through an intuitive context menu.</li>
-          <li><strong>Automatic Column Width Adjustment:</strong> Columns are auto-adjusted based on their content to ensure a clean and readable layout.</li>
+          <li><strong>Docker Containerization:</strong> Utilized Docker to package the Enrollment application and PostgreSQL database into containers, ensuring consistent environments across development, testing, and production.</li>
+          <li><strong>Kubernetes Orchestration:</strong> Deployed and managed these containers within a Kubernetes cluster, leveraging Kubernetes' powerful scheduling and load balancing capabilities to handle increased loads and ensure high availability.</li>
+          <li><strong>FastAPI Integration:</strong> Developed a RESTful API using FastAPI, which not only provided a robust backend for handling the logic of course and student enrollments but also included automatic interactive API documentation using Swagger UI.</li>
+          <li><strong>Persistent Storage:</strong> Configured Kubernetes Persistent Volumes (PVs) and Persistent Volume Claims (PVCs) to ensure data persistence across pod restarts and deployments.</li>
+          <li><strong>Security Features:</strong> Planned and theoretically implemented security measures using an API gateway to secure sensitive endpoints and data transactions within the cluster.</li>
         </ul>
 
-        <strong>Technology Stack:</strong>
+        <strong>Technologies Used:</strong>
         <ul>
-          <li><strong>Python:</strong> Core programming language for logic and data processing.</li>
-          <li><strong>PyQt5:</strong> Used for building the GUI components and managing user interactions.</li>
-          <li><strong>Matplotlib:</strong> Integrated for data visualization, enabling users to generate charts and graphs based on the table data.</li>
-          <li><strong>Pandas:</strong> Used for CSV file handling, making it easy to import/export spreadsheet data.</li>
+          <li><strong>Docker:</strong> For creating isolated environments for application and database components, facilitating easy deployment and scaling.</li>
+          <li><strong>Kubernetes:</strong> For automating deployment, scaling, and operations of application containers across clusters of hosts.</li>
+          <li><strong>FastAPI:</strong> For building efficient and straightforward REST APIs with Python.</li>
+          <li><strong>Minikube:</strong> For running a local Kubernetes cluster, ideal for development and testing.</li>
+          <li><strong>Swagger UI:</strong> For interactive and automatic API documentation.</li>
+          <li><strong>Python:</strong> Primary programming language used for backend development and scripting.</li>
         </ul>
 
-        <strong>Learning Outcomes:</strong>
+        <strong>Challenges Overcome:</strong>
         <ul>
-          <li>Developed proficiency in PyQt5 for creating interactive desktop applications.</li>
-          <li>Implemented custom formula parsing and evaluation within a table widget.</li>
-          <li>Gained experience in handling CSV data and integrating graphical plots with <code>matplotlib</code>.</li>
-          <li>Enhanced understanding of user interface design and desktop application workflows.</li>
+          <li><strong>Container Orchestration:</strong> Mastering Kubernetes configurations such as deployments, services, ConfigMaps, and secrets to ensure the application runs seamlessly in a microservices architecture.</li>
+          <li><strong>Security Implementation:</strong> Addressing theoretical security challenges using an API gateway to protect against common vulnerabilities and threats in a cloud-native environment.</li>
+          <li><strong>Persistent Data Management:</strong> Ensuring data persistence in a stateless environment provided by Kubernetes using Persistent Volumes and Claims.</li>
         </ul>
 
-        <p>This project demonstrates my ability to build complex desktop applications with user-friendly interfaces and advanced functionality such as formula management, data visualization, and file handling.</p>
+        <strong>Future Enhancements:</strong>
+        <ul>
+          <li><strong>CI/CD Integration:</strong> Implement continuous integration and deployment pipelines to streamline updates and deployment processes.</li>
+          <li><strong>Security Enhancements:</strong> Implement practical API gateway solutions like Istio or Nginx for advanced traffic management and security.</li>
+          <li><strong>Performance Monitoring:</strong> Integrate tools like Prometheus and Grafana for real-time monitoring and performance analytics.</li>
+        </ul>
+
+        <strong>Project Impact:</strong>
+        <p>
+          This project showcases the practical implementation of modern DevOps practices and tools, demonstrating an advanced understanding of cloud-native technologies. It serves as a foundation for building scalable, secure, and resilient applications, reflecting a deep commitment to quality and innovative software development practices. This project is a testament to the capability to design and manage complex cloud architectures and provides a robust template for future projects requiring high availability and security.
+        </p>
       </>
-    ), 
-    images: [excelImage, excelImage2, excelImage3], // Relative paths to images
-    technologies: ['Python', 'Matlab'],
-    github: 'https://github.com/ValentynTokariuk/PyProj',
+    ),
+    images: [orchImage, orchImage1, orchImage2, orchImage3], // Add an image representing the project
+    technologies: ['Docker', 'Kubernetes', 'FastAPI', 'Minikube', 'Swagger UI', 'Python'],
+    github: 'https://github.com/ValentynTokariuk/Orchestration',
+    report: OrchectrationProject,
   },
   {
     title: 'NetSketch - Collaborative Whiteboard Application',
@@ -127,57 +138,46 @@ const projects = [
     keynote: robotPresentation,
   },
   {
-    title: 'Cloud-Native Application Deployment Using Docker and Kubernetes',
+    title: 'Custom Spreadsheet Application with Formula Support and Data Visualization',
     description: (
       <>
         <strong>Description:</strong>
-        <p>
-          This project demonstrates the deployment of a cloud-native application, specifically an online university course enrollment system, using Docker and Kubernetes technologies. The objective was to containerize the application and database components using Docker and then orchestrate these containers using Kubernetes to ensure scalability, reliability, and security.
-        </p>
+        <p>This project is a custom-built spreadsheet application developed using Python and PyQt5, featuring core functionality similar to Microsoft Excel. It provides users with the ability to manage tabular data, perform calculations using formulas, visualize data with charts, and perform various data manipulation tasks. The application is designed to be user-friendly while offering flexibility for advanced use cases.</p>
 
         <strong>Key Features:</strong>
         <ul>
-          <li><strong>Docker Containerization:</strong> Utilized Docker to package the Enrollment application and PostgreSQL database into containers, ensuring consistent environments across development, testing, and production.</li>
-          <li><strong>Kubernetes Orchestration:</strong> Deployed and managed these containers within a Kubernetes cluster, leveraging Kubernetes' powerful scheduling and load balancing capabilities to handle increased loads and ensure high availability.</li>
-          <li><strong>FastAPI Integration:</strong> Developed a RESTful API using FastAPI, which not only provided a robust backend for handling the logic of course and student enrollments but also included automatic interactive API documentation using Swagger UI.</li>
-          <li><strong>Persistent Storage:</strong> Configured Kubernetes Persistent Volumes (PVs) and Persistent Volume Claims (PVCs) to ensure data persistence across pod restarts and deployments.</li>
-          <li><strong>Security Features:</strong> Planned and theoretically implemented security measures using an API gateway to secure sensitive endpoints and data transactions within the cluster.</li>
+          <li><strong>Spreadsheet Functionality:</strong> Supports adding and editing cells, rows, and columns with the ability to sort and filter data.</li>
+          <li><strong>Formula Bar:</strong> Users can input formulas (e.g., <code>=SUM(A1:B2)</code> or arithmetic calculations like <code>=A1+B2</code>). The formulas are stored and can be edited later, and results are automatically updated in the selected cells.</li>
+          <li><strong>Data Visualization:</strong> Provides real-time bar chart generation based on selected columns, allowing users to visualize their data directly within the app.</li>
+          <li><strong>Undo/Redo Functionality:</strong> Users can easily revert changes with undo/redo actions, preserving the previous states of the spreadsheet.</li>
+          <li><strong>CSV File Import/Export:</strong> Data can be imported from or exported to CSV files, making it easy to transfer data between this application and other platforms.</li>
+          <li><strong>Cell Formatting:</strong> Supports basic text formatting such as bold, italic, font changes, and cell alignment (left, center, right).</li>
+          <li><strong>Context Menu Actions:</strong> Users can quickly perform operations such as copy, cut, paste, and font color changes through an intuitive context menu.</li>
+          <li><strong>Automatic Column Width Adjustment:</strong> Columns are auto-adjusted based on their content to ensure a clean and readable layout.</li>
         </ul>
 
-        <strong>Technologies Used:</strong>
+        <strong>Technology Stack:</strong>
         <ul>
-          <li><strong>Docker:</strong> For creating isolated environments for application and database components, facilitating easy deployment and scaling.</li>
-          <li><strong>Kubernetes:</strong> For automating deployment, scaling, and operations of application containers across clusters of hosts.</li>
-          <li><strong>FastAPI:</strong> For building efficient and straightforward REST APIs with Python.</li>
-          <li><strong>Minikube:</strong> For running a local Kubernetes cluster, ideal for development and testing.</li>
-          <li><strong>Swagger UI:</strong> For interactive and automatic API documentation.</li>
-          <li><strong>Python:</strong> Primary programming language used for backend development and scripting.</li>
+          <li><strong>Python:</strong> Core programming language for logic and data processing.</li>
+          <li><strong>PyQt5:</strong> Used for building the GUI components and managing user interactions.</li>
+          <li><strong>Matplotlib:</strong> Integrated for data visualization, enabling users to generate charts and graphs based on the table data.</li>
+          <li><strong>Pandas:</strong> Used for CSV file handling, making it easy to import/export spreadsheet data.</li>
         </ul>
 
-        <strong>Challenges Overcome:</strong>
+        <strong>Learning Outcomes:</strong>
         <ul>
-          <li><strong>Container Orchestration:</strong> Mastering Kubernetes configurations such as deployments, services, ConfigMaps, and secrets to ensure the application runs seamlessly in a microservices architecture.</li>
-          <li><strong>Security Implementation:</strong> Addressing theoretical security challenges using an API gateway to protect against common vulnerabilities and threats in a cloud-native environment.</li>
-          <li><strong>Persistent Data Management:</strong> Ensuring data persistence in a stateless environment provided by Kubernetes using Persistent Volumes and Claims.</li>
+          <li>Developed proficiency in PyQt5 for creating interactive desktop applications.</li>
+          <li>Implemented custom formula parsing and evaluation within a table widget.</li>
+          <li>Gained experience in handling CSV data and integrating graphical plots with <code>matplotlib</code>.</li>
+          <li>Enhanced understanding of user interface design and desktop application workflows.</li>
         </ul>
 
-        <strong>Future Enhancements:</strong>
-        <ul>
-          <li><strong>CI/CD Integration:</strong> Implement continuous integration and deployment pipelines to streamline updates and deployment processes.</li>
-          <li><strong>Security Enhancements:</strong> Implement practical API gateway solutions like Istio or Nginx for advanced traffic management and security.</li>
-          <li><strong>Performance Monitoring:</strong> Integrate tools like Prometheus and Grafana for real-time monitoring and performance analytics.</li>
-        </ul>
-
-        <strong>Project Impact:</strong>
-        <p>
-          This project showcases the practical implementation of modern DevOps practices and tools, demonstrating an advanced understanding of cloud-native technologies. It serves as a foundation for building scalable, secure, and resilient applications, reflecting a deep commitment to quality and innovative software development practices. This project is a testament to the capability to design and manage complex cloud architectures and provides a robust template for future projects requiring high availability and security.
-        </p>
+        <p>This project demonstrates my ability to build complex desktop applications with user-friendly interfaces and advanced functionality such as formula management, data visualization, and file handling.</p>
       </>
-    ),
-    images: [orchImage, orchImage1, orchImage2, orchImage3], // Add an image representing the project
-    technologies: ['Docker', 'Kubernetes', 'FastAPI', 'Minikube', 'Swagger UI', 'Python'],
-    github: 'https://github.com/ValentynTokariuk/Orchestration',
-    report: OrchectrationProject,
+    ), 
+    images: [excelImage, excelImage2, excelImage3], // Relative paths to images
+    technologies: ['Python', 'Matlab'],
+    github: 'https://github.com/ValentynTokariuk/PyProj',
   },
 ];
 
@@ -271,7 +271,7 @@ const Projects = () => {
                 <a href={project.report} target="_blank" rel="noopener noreferrer">View Report</a>
               )}
               {project.keynote && (
-                <a href={project.keynote} target="_blank" rel="noopener noreferrer">View Keynote</a>
+                <a href={project.keynote} target="_blank" rel="noopener noreferrer">Download Presentation</a>
               )}
 
             </div>

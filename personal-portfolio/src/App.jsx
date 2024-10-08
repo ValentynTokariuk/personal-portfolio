@@ -75,6 +75,9 @@ const App = () => {
               <a href="https://linkedin.com/in/yourlinkedin" target="_blank" rel="noopener noreferrer">
                 LinkedIn
               </a>
+              <a href="https://wa.me/35679060965" target="_blank" rel="noopener noreferrer">
+                WhatsApp
+              </a>
             </div>
             <p>© {new Date().getFullYear()} Valentyn Tokariuk. All Rights Reserved.</p>
           </div>

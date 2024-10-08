@@ -5,6 +5,7 @@
   box-sizing: border-box;
   
 }
+
 header{
   background-image: url('https://png.pngtree.com/thumb_back/fw800/background/20231031/pngtree-deep-charcoal-texture-crispy-paper-with-a-dark-edgy-vibe-image_13705571.png');
   text-align: center;
@@ -20,9 +21,8 @@ header h3 {
 header h3 :hover {
   text-decoration: underline; /* Optionally add underline on hover */
 }
-body {
-  font-family: 'Roboto', sans-serif; /* Default font for body text */
-}
+
+
 
 h1, h2, h3 {
   font-family: 'Poppins', sans-serif; /* Different font for headings */
@@ -96,9 +96,8 @@ nav {
 
 #home {
   padding: 40px;
-  background: linear-gradient(130deg, #000000cb 15%, #6f0000 85%);
-  background-size: cover;
 }
+
 .right-align {
   text-align: right;
 }
@@ -179,25 +178,21 @@ nav {
 
 .cta-btn:hover {
   background-color: #6e0000;
-  transform: translateY(-5px);
+  transform: translateY(-100px);
 }
 
 /* Skills section */
 .skills {
   margin-top: 50px;
   animation: fadeIn 3s ease-in-out;
-}
-
-.skills h2 {
-  text-align: center;
-  margin-bottom: 20px;
-  font-size: 2rem;
+  
 }
 
 .skills ul {
   list-style-type: none;
   margin-bottom: 20px;
   text-align: center;
+  padding: 0; /* Remove padding if any */
 }
 
 .skills li {
@@ -206,7 +201,14 @@ nav {
   opacity: 0;
   transform: translateY(20px);
   animation: fadeInUp 2s ease-in-out forwards;
+  }
+
+.skills h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 2rem;
 }
+
 
 /* Delays for each list item */
 .skills li:nth-child(1) { animation-delay: 0.2s; }
@@ -304,12 +306,7 @@ nav {
   }
 }
 
-/* Projects section */
-#projects {
-  padding: 40px;
-  background: linear-gradient(130deg, #000000cb 15%, #6f0000 85%);
-  background-size: cover;
- }
+
 
 .projects-title {
   text-align: center;
@@ -505,5 +502,206 @@ p {
 
   .project-card {
     width: 90%;
+  }
+}
+/* Contact section styles */
+#contact {
+  padding: 40px;
+  text-align: center;
+  color: #ffffff;
+  transform: translateY(20px);
+  animation: fadeInUp 1s ease-in-out forwards;
+}
+
+/* Form styles */
+.contact-form {
+  width: 80%;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: rgb(99, 67, 67);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+.form-group label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.form-group textarea {
+  height: 150px;
+  resize: vertical;
+}
+
+.submit-btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #fb7d61;
+  color: white;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+  background-color: #b63518;
+}
+
+/* Status message styling */
+.status-message {
+  margin-top: 20px;
+  font-size: 1rem;
+  color: rgb(255, 0, 0);
+}
+#contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh; /* Full viewport height to center vertically */
+  text-align: center;
+}
+
+.contact-buttons {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px; /* Space between each button */
+}
+
+.contact-button p {
+  margin-bottom: 20px; /* Space between the description and button */
+  font-weight: bold;
+}
+
+.contact-buttons a {
+  margin-top: 20px;
+  padding: 10px 20px;
+  border-radius: 5px;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.whatsapp-btn {
+  background-color: #25d366;
+}
+
+.github-btn {
+  background-color: #333333;
+}
+
+.linkedin-btn {
+  background-color: #0077b5;
+}
+
+.email-btn {
+  background-color: #ea4335;
+}
+
+.call-btn {
+  background-color: #34b7f1;
+}
+
+.contact-buttons a:hover {
+  transform: translateY(-5px);
+  opacity: 0.9; /* Adds a slight transparency to hover effect */
+}
+@media (max-width: 768px) {
+  .contact-form {
+    width: 95%; /* Make it take almost the full width of smaller screens */
+    padding: 10px; /* Reduce padding on small screens for better fit */
+  }
+}
+
+/* General reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+#about-me {
+  background: linear-gradient(130deg, #000000cb 15%, #6f0000 85%);
+  padding: 60px 20px;
+}
+
+.about-block {
+  display: flex;
+  align-items: center;
+  margin-bottom: 60px;
+  padding: 20px;
+}
+
+.about-left {
+  flex-direction: row-reverse;
+}
+
+.about-right {
+  flex-direction: row;
+}
+
+.about-photo {
+  width: 40%;
+  max-width: 300px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
+}
+
+.about-photo:hover {
+  transform: scale(1.05);
+}
+
+.about-text {
+  flex: 1;
+  padding: 20px;
+  max-width: 600px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.2rem;
+  color: #fff;
+}
+
+.about-text h2 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+}
+
+.about-text p {
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .about-block {
+    flex-direction: column;
+  }
+
+  .about-photo {
+    width: 80%;
+    margin-bottom: 20px;
+  }
+
+  .about-text {
+    text-align: center;
   }
 }
